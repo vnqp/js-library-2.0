@@ -7,24 +7,22 @@ function Book(title, author, pages, status) {
   this.status = status;
 }
 
-
 closeColumnBtn = document.getElementById("close-column-btn")
 closeColumnBtn.onclick = function() {
     formSector = document.getElementById("add-book-sector");
     formSector.classList.add("hide");
-};
+}
 
-
-const formSubmitBtn = document.getElementById("form-submit-btn")
+formSubmitBtn = document.getElementById("form-submit-btn")
 formSubmitBtn.onclick = function(event) {
-  let bookName = document.getElementById("book-title").value
-  let bookAuthor = document.getElementById("book-author").value
-  let bookPages = document.getElementById("book-pages").value
-  let bookStatus = document.getElementById("book-status")
+  let bookName = document.getElementById("book-title").value;
+  let bookAuthor = document.getElementById("book-author").value;
+  let bookPages = document.getElementById("book-pages").value;
+  let bookStatus = document.getElementById("book-status");
   if (bookStatus.checked) {
-    bookStatus = "READ"
+    bookStatus = "READ";
   } else {
-    bookStatus = "TO READ"
+    bookStatus = "TO READ";
   }
 
   addBookToLibrary(new Book(bookName, bookAuthor, bookPages, bookStatus));
@@ -78,16 +76,8 @@ function createBookPrototype(book) {
   }
   bookDiv.appendChild(status);
 
-
   booksDiv.appendChild(bookDiv);
-
   return bookDiv;
-}
-
-
-
-function addBooksToPage() {
-  myLibrary.forEach(createBookPrototype);
 }
 
 function addBooksBtnToPage() {
@@ -109,6 +99,10 @@ function addBooksBtnToPage() {
   books.appendChild(addBtnDiv);
 }
 
+function addBooksToPage() {
+  myLibrary.forEach(createBookPrototype);
+}
+
 function addBookToLibrary(book) {
   myLibrary.push(book);
 
@@ -123,13 +117,3 @@ let theHobbit = new Book("The Hobbit", "J..R.R Tolkien", "295", "TO READ");
 let aGameOfThrones = new Book("A Game of Thrones", "George R. R. Martin", "694", "READ");
 addBookToLibrary(theHobbit);
 addBookToLibrary(aGameOfThrones);
-
-
-
-
-
-
-
-
-
-
