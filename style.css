@@ -1,0 +1,40 @@
+#books {
+  display: flex;
+  gap: 10px;
+}
+
+.book {
+  display: grid;
+
+  width: 250px;
+  height: 270px;
+  padding: 20px;
+
+  border-right: 8px solid #210124;
+  border-left: 0px solid #210124;
+  border-top: 8px solid #210124;
+
+  box-shadow: 5px 5px 5px 0px #9CA3AF;
+}
+
+.book .book-status {
+  align-self: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 50px;
+  max-width: auto;
+
+  margin: -20px;
+
+
+  background-color: #210124;
+  color: white;
+
+  font-family: cursive;
+  font-weight: 800;
+}
+
+
+
