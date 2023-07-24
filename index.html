@@ -9,8 +9,45 @@
   <title>Document</title>
 </head>
 <body>
-  <div id="books">
+  <div id="library-sector">
+    <div>
+      <div class="library-bar">
+        <h1>My Library</h1>
+      </div>
+      <div id="books">
 
+        <div id="add-book-btn-area">
+          <button id="add-book-btn" class="add-book-btn">+</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="add-book-sector" class="hide">
+    <button id="close-column-btn">X</button>
+    <form action="" class="add-book-form">
+      <h1>Add a Book</h1>
+      <div class="input-div">
+        <label for="book-title">Title</label>
+        <input type="text" name="book-title" id="book-title">
+      </div>
+      <div class="input-div">
+        <label for="book-author">Author</label>
+        <input type="text" name="book-author" id="book-author">
+      </div>
+      <div class="input-div">
+        <label for="book-pages">Number Of Pages</label>
+        <input type="number" name="book-pages" id="book-pages">
+      </div>
+      <div class="input-div-checkbox">
+        <label for="book-status">Read the book? </label>
+        <input type="checkbox" value="true" name="book-status" id="book-status">
+      </div>
+
+
+      <button id="form-submit-btn" class="form-submit-btn">Submit</button>
+    </form>
   </div>
 </body>
 </html>
