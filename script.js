@@ -52,6 +52,7 @@ class Book {
     this.author = author;
     this.pages = pages;
     this.status = status;
+    this.id = Book.myLibrary.length;
 
     this.addBookToLibrary();
     Book.addBookToPage();
@@ -79,7 +80,8 @@ class Book {
       removeBook.innerText = "X";
       removeBook.classList.add("remove-book-btn");
       removeBook.onclick = function () {
-        Book.myLibrary.pop(book)
+        let bookIndex = Book.myLibrary.indexOf(book);
+        Book.myLibrary.splice(bookIndex, 1)
         bookDiv.remove();
       }
       titleDiv.appendChild(removeBook)
